@@ -1,0 +1,77 @@
+<header>
+  <h2>ARGUS Assess</h2>
+  <hr>
+</header>
+
+<h2>{{name}}</h2>
+
+<div class="box-occ">
+  <h4>
+    Occupancy
+  </h4>
+  <div id="progress" class="graph">
+    <div id="bar" [ngStyle]="{'max-width':100+'%','width':math.floor(tenantArea * (100/rentAbleArea))+'%'}"></div>
+  </div>
+  <span style="margin-left: 75px">{{tenantArea | number:'1.0-0'}} SF
+    ({{math.floor(tenantArea * (100/rentAbleArea))}}%)</span>
+</div>
+
+<div class="box-occ">
+  <div class="table">
+    <div class="table-row">
+      <div class="table-cell">
+        <label class="table-header">Property</label>
+      </div>
+      <div class="table-cell">
+      </div>
+      <div class="table-cell">
+        <label class="table-header">Tenant</label>
+      </div>
+      <div class="table-cell">
+      </div>
+
+    </div>
+    <div class="table-row">
+      <div class="table-cell">
+        <label>Name</label>
+      </div>
+      <div class="table-cell">
+        <input [(ngModel)]="name" (onchange)="name = $event.target.value">
+      </div>
+      <div class="table-cell">
+        <label>Tenant Name</label>
+      </div>
+      <div class="table-cell">
+        <input [(ngModel)]="tenantName" (onchange)="tenantName = $event.target.value">
+      </div>
+
+    </div>
+    <div class="table-row">
+      <div class="table-cell">
+        <label>Rentable Area</label>
+      </div>
+      <div class="table-cell">
+        <span class="sign-span-1"> $ </span> <input type="number" [(ngModel)]="rentAbleArea"
+          (onchange)="rentAbleArea =$event.target.value">
+      </div>
+      <div class="table-cell">
+        <label>Tenant Area</label>
+      </div>
+      <div class="table-cell">
+        <span class="sign-span-2"> SF </span> <input type="number" [(ngModel)]="tenantArea"
+          (onchange)="tenantArea = $event.target.value">
+      </div>
+
+    </div>
+  </div>
+</div>
+<footer>
+  <hr>
+  <h4>ARGUS Software (UK) Ltd. 2017</h4>
+</footer>
+
+
+
+
+
+<router-outlet></router-outlet>

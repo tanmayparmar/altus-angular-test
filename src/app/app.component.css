@@ -1,0 +1,64 @@
+header,footer {
+  padding: 20px;
+}
+
+.box-occ {
+  width: 75%;
+  border: 2px solid;
+  padding: 10px;
+  margin: 20px;
+}
+.pro-container{padding:10px 25px}
+
+.table {
+  display: table;
+  max-width: 800px;
+  width: 75%;
+}
+.table-row {
+  display: table-row;
+}
+.table-cell {
+  display: table-cell;
+  padding: 10px;
+}
+.table-header{
+  font-weight: 700
+}
+input[type=number] { text-align:right }
+
+input {
+  width: 100%;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.graph {
+  max-width: 800px;
+  width: 75%;
+  height: 20px;
+  border: 1px solid #888;
+  position: relative;
+}
+#bar {
+  height: 20px;
+  background: rgb(12, 12, 12);
+
+}
+
+.sign-span-1 {
+  position: absolute;
+  margin-left: -12px
+}
+
+.sign-span-2 {
+  position: absolute;
+  margin-left: -20px
+}
